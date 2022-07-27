@@ -23,15 +23,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterTheNumberText: UITextField!
     @IBOutlet weak var showIIndexLabel: UILabel!
     @IBAction func enterTheNumber(_ sender: Any) {
-        indexForGuess = indexForGuess - 1
-        if indexForGuess <= 0 {
+        if upNumber == downNumber{
+            showResultLabel.text = "好棒喔，你猜對了\n請按Replay重新開始玩"
+        }else if indexForGuess <= 0 {
+            indexForGuess = indexForGuess - 1
             showResultLabel.text = "好可惜，答案是\(theAnswer)\n請按Replay重新開始玩"
             showIIndexLabel.text = "你沒有機會了！"
-        } else {
+        }else {
+            indexForGuess = indexForGuess - 1
             showIIndexLabel.text = "你還有\(indexForGuess) 次機會"
             if let enterTheNumberText = Int(enterTheNumberText.text!) {
                 if enterTheNumberText == theAnswer {
                     showResultLabel.text = "好棒喔，你猜對了\n請按Replay重新開始玩"
+                    upNumber = theAnswer
+                    downNumber = theAnswer
                 }else if enterTheNumberText > upNumber || enterTheNumberText < downNumber {
                     showResultLabel.text = "請在範圍內選擇數字，範圍\(downNumber)~\(upNumber)"
                 }else if enterTheNumberText > theAnswer {
@@ -52,10 +57,10 @@ class ViewController: UIViewController {
         theAnswer = Int.random(in: 0...1000)
         showResultLabel.text = "重新開始，請在 0 ~ 1000 猜一個數字"
         showIIndexLabel.text = "你有10次機會"
+        enterTheNumberText.text = ""
         indexForGuess = 10
         upNumber = 1000
         downNumber = 0
     }
-    
 }
 
