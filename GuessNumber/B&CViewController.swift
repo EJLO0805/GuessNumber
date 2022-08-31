@@ -63,34 +63,37 @@ class B_CViewController: UIViewController {
     }
     
     @IBAction func enterTheAnwser(_ sender: Any) {
-        if countIndex <= 0 || a == 4 {
-            showResultLabel.text = "請按 Replay 重新開始玩"
-            inputNumberLabel.map { $0.text = "" }
-        } else if countIndex > 0 {
-            countIndex -= 1
-            for index in 0...3 {
-                a = inputNumbers[index] == theAnwsers[index] ? a + 1 : a
-                b = (inputNumbers[index] != theAnwsers[index]) && (theAnwsers.contains(inputNumbers[index])) ? b + 1 : b
+        if inputNumberLabel.contains(where: { $0.text == ""}) {return}
+        else{
+            if countIndex <= 0 || a == 4 {
+                showResultLabel.text = "請按 Replay 重新開始玩"
+                inputNumberLabel.map { $0.text = "" }
+            } else if countIndex > 0 {
+                countIndex -= 1
+                for index in 0...3 {
+                    a = inputNumbers[index] == theAnwsers[index] ? a + 1 : a
+                    b = (inputNumbers[index] != theAnwsers[index]) && (theAnwsers.contains(inputNumbers[index])) ? b + 1 : b
+                }
+                inputNumbersString.append("\(inputNumbers.map{"\($0)"}.joined(separator: "")) \(a)A\(b)B")
+                switch a {
+                    case 4 where countIndex >= 0:
+                        showResultLabel.text = "好棒棒🎉，你猜對了🥳\n答案就是 \(theAnwsers.map{"\($0)"}.joined(separator: ""))"
+                        inputNumberLabel.map { $0.text = "" }
+                        bottomLock(numberBottom, false)
+                    case ..<4 where countIndex > 0 :
+                        showResultLabel.text = "\(inputNumbersString.joined(separator: "\n"))"
+                        clearInformation()
+                        bottomLock(numberBottom, true)
+                    case ..<4 where inputNumbers.count < 4 :
+                        showResultLabel.text = "請輸入四個數字"
+                    default :
+                        showResultLabel.text = "好可惜，答案是\(theAnwsers.map{"\($0)"}.joined(separator: ""))\n請按 Replay 重新開始"
+                        inputNumberLabel.map { $0.text = "" }
+                        bottomLock(numberBottom, false)
+                }
             }
-            inputNumbersString.append("\(inputNumbers.map{"\($0)"}.joined(separator: "")) \(a)A\(b)B")
-            switch a {
-                case 4 where countIndex >= 0:
-                    showResultLabel.text = "好棒棒🎉，你猜對了🥳\n答案就是 \(theAnwsers.map{"\($0)"}.joined(separator: ""))"
-                    inputNumberLabel.map { $0.text = "" }
-                    bottomLock(numberBottom, false)
-                case ..<4 where countIndex > 0 :
-                    showResultLabel.text = "\(inputNumbersString.joined(separator: "\n"))"
-                    clearInformation()
-                    bottomLock(numberBottom, true)
-                case ..<4 where inputNumbers.count < 4 :
-                    showResultLabel.text = "請輸入四個數字"
-                default :
-                    showResultLabel.text = "好可惜，答案是\(theAnwsers.map{"\($0)"}.joined(separator: ""))\n請按 Replay 重新開始"
-                    inputNumberLabel.map { $0.text = "" }
-                    bottomLock(numberBottom, false)
-            }
+            indexLabel.text = "\(countIndex)"
         }
-        indexLabel.text = "\(countIndex)"
     }
     
     @IBAction func deleteNumber(_ sender: UIButton) {
