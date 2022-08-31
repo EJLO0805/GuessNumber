@@ -23,14 +23,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterTheNumberText: UITextField!
     @IBOutlet weak var showIIndexLabel: UILabel!
     @IBAction func enterTheNumber(_ sender: Any) {
+        indexForGuess = indexForGuess - 1
         if upNumber == downNumber{
             showResultLabel.text = "好棒喔，你猜對了\n請按Replay重新開始玩"
-        }else if indexForGuess <= 0 {
-            indexForGuess = indexForGuess - 1
+        }else if indexForGuess <= 0, Int(enterTheNumberText.text!) != theAnswer {
             showResultLabel.text = "好可惜，答案是\(theAnswer)\n請按Replay重新開始玩"
             showIIndexLabel.text = "你沒有機會了！"
         }else {
-            indexForGuess = indexForGuess - 1
             showIIndexLabel.text = "你還有\(indexForGuess) 次機會"
             if let enterTheNumberText = Int(enterTheNumberText.text!) {
                 if enterTheNumberText == theAnswer {

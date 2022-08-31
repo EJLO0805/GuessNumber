@@ -1,14 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Si-sS-Ozk">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--bull&cow-->
+        <scene sceneID="eyx-m2-f9h">
+            <objects>
+                <viewController id="Cmc-IX-gMB" customClass="B_CViewController" customModule="GuessNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybs-IE-PuL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kk-KN-ErV">
+                                <rect key="frame" x="19" y="404" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="1"/>
+                                <buttonConfiguration key="configuration" style="filled" title="1">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="7xb-Zt-tXU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-cZ-0MW">
+                                <rect key="frame" x="108" y="404" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="hD0-tX-1uJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-0t-gwe">
+                                <rect key="frame" x="19" y="484" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="1"/>
+                                <buttonConfiguration key="configuration" style="filled" title="4">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="POb-wG-aK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soW-ar-sPz">
+                                <rect key="frame" x="108" y="484" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="5">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="igd-fW-OcH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-8p-KPi">
+                                <rect key="frame" x="19" y="564" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="1"/>
+                                <buttonConfiguration key="configuration" style="filled" title="7">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="w2g-8a-WJO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-hR-kpO">
+                                <rect key="frame" x="108" y="564" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="8">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="br0-dB-RPA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njJ-vy-uIs">
+                                <rect key="frame" x="108" y="644" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="0">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="1eN-kS-j2Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-bP-d4m">
+                                <rect key="frame" x="198" y="404" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="3">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="fHh-u4-WpZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bov-ah-tPC">
+                                <rect key="frame" x="198" y="484" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="6">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="lYy-MQ-BOa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-MU-smF">
+                                <rect key="frame" x="197" y="564" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="9">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterNumberBottom:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="qu6-Qj-S3C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sx-3p-TgC">
+                                <rect key="frame" x="19" y="644" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="heavy"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="large" weight="heavy"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="replay:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="1a7-SQ-xdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-6Z-cks">
+                                <rect key="frame" x="286" y="546" width="70" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterTheAnwser:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="ycL-rf-KeF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-UB-ZjZ">
+                                <rect key="frame" x="197" y="644" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="">
+                                    <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteNumber:" destination="Cmc-IX-gMB" eventType="touchUpInside" id="GkC-zC-2og"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh7-gq-Eoz">
+                                <rect key="frame" x="19" y="325" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4F-al-D8j">
+                                <rect key="frame" x="108" y="325" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-4e-PrE">
+                                <rect key="frame" x="197" y="325" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGY-jI-20A">
+                                <rect key="frame" x="286" y="325" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTo-kg-uTC">
+                                <rect key="frame" x="286" y="404" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRg-cE-3fo">
+                                <rect key="frame" x="19" y="55" width="337" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HgP-4l-4AG"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="bull&amp;cow" image="gamecontroller.fill" catalog="system" selectedImage="gamecontroller" id="q8S-Ha-YQb"/>
+                    <connections>
+                        <outlet property="indexLabel" destination="tTo-kg-uTC" id="zqi-VC-806"/>
+                        <outlet property="showResultLabel" destination="JRg-cE-3fo" id="0tl-1T-QvI"/>
+                        <outletCollection property="inputNumberLabel" destination="Jh7-gq-Eoz" collectionClass="NSMutableArray" id="caV-mf-zuB"/>
+                        <outletCollection property="inputNumberLabel" destination="u4F-al-D8j" collectionClass="NSMutableArray" id="lZz-fv-pyG"/>
+                        <outletCollection property="inputNumberLabel" destination="Khd-4e-PrE" collectionClass="NSMutableArray" id="COn-OQ-8OH"/>
+                        <outletCollection property="inputNumberLabel" destination="ZGY-jI-20A" collectionClass="NSMutableArray" id="1nt-ZQ-0Va"/>
+                        <outletCollection property="numberBottom" destination="njJ-vy-uIs" collectionClass="NSMutableArray" id="VBP-RA-sf0"/>
+                        <outletCollection property="numberBottom" destination="5Kk-KN-ErV" collectionClass="NSMutableArray" id="rQl-Dd-muJ"/>
+                        <outletCollection property="numberBottom" destination="EIN-cZ-0MW" collectionClass="NSMutableArray" id="BGA-Ia-Ksa"/>
+                        <outletCollection property="numberBottom" destination="MgL-bP-d4m" collectionClass="NSMutableArray" id="IDA-ws-wLc"/>
+                        <outletCollection property="numberBottom" destination="Zv5-0t-gwe" collectionClass="NSMutableArray" id="tcO-5T-x9m"/>
+                        <outletCollection property="numberBottom" destination="soW-ar-sPz" collectionClass="NSMutableArray" id="M7P-sK-6mg"/>
+                        <outletCollection property="numberBottom" destination="Bov-ah-tPC" collectionClass="NSMutableArray" id="j9K-Wd-4H4"/>
+                        <outletCollection property="numberBottom" destination="tgW-8p-KPi" collectionClass="NSMutableArray" id="YFw-Kh-UZf"/>
+                        <outletCollection property="numberBottom" destination="eCv-hR-kpO" collectionClass="NSMutableArray" id="Ejc-hI-kfU"/>
+                        <outletCollection property="numberBottom" destination="vEm-MU-smF" collectionClass="NSMutableArray" id="pbb-bP-gL5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pP-vI-NyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="511.33004926108379"/>
+        </scene>
+        <!--guess-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessNumber" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +307,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入數字" textAlignment="center" clearsOnBeginEditing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MHU-fE-BFi">
                                 <rect key="frame" x="68" y="251" width="238" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -59,6 +323,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="guess" image="gamecontroller.fill" catalog="system" selectedImage="gamecontroller" id="Duo-Q3-JKW"/>
                     <connections>
                         <outlet property="enterTheNumberText" destination="MHU-fE-BFi" id="rXo-au-dTo"/>
                         <outlet property="showIIndexLabel" destination="Y3d-8R-yZo" id="261-As-V36"/>
@@ -67,10 +332,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.399999999999999" y="83.497536945812811"/>
+            <point key="canvasLocation" x="353" y="-164"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="swe-1V-CGc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Si-sS-Ozk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a1R-Sa-Yxs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Mfw-w7-Q4I"/>
+                        <segue destination="Cmc-IX-gMB" kind="relationship" relationship="viewControllers" id="Mf7-YJ-s5p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbd-Q9-xIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="118.96551724137932"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
+        <image name="gamecontroller" catalog="system" width="128" height="80"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

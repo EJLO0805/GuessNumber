@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5301D43A28BF251F0009061D /* B&CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301D43928BF251F0009061D /* B&CViewController.swift */; };
+		5301D43C28BF27410009061D /* GuessNumberStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301D43B28BF27410009061D /* GuessNumberStruct.swift */; };
 		5318C60C289117AE00795239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318C60B289117AE00795239 /* AppDelegate.swift */; };
 		5318C60E289117AE00795239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318C60D289117AE00795239 /* SceneDelegate.swift */; };
 		5318C610289117AE00795239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318C60F289117AE00795239 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5301D43928BF251F0009061D /* B&CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "B&CViewController.swift"; sourceTree = "<group>"; };
+		5301D43B28BF27410009061D /* GuessNumberStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberStruct.swift; sourceTree = "<group>"; };
 		5318C608289117AE00795239 /* GuessNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5318C60B289117AE00795239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5318C60D289117AE00795239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				5318C60D289117AE00795239 /* SceneDelegate.swift */,
 				5318C60F289117AE00795239 /* ViewController.swift */,
 				5318C611289117AE00795239 /* Main.storyboard */,
+				5301D43928BF251F0009061D /* B&CViewController.swift */,
+				5301D43B28BF27410009061D /* GuessNumberStruct.swift */,
 				5318C614289117B100795239 /* Assets.xcassets */,
 				5318C616289117B100795239 /* LaunchScreen.storyboard */,
 				5318C619289117B100795239 /* Info.plist */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5301D43A28BF251F0009061D /* B&CViewController.swift in Sources */,
+				5301D43C28BF27410009061D /* GuessNumberStruct.swift in Sources */,
 				5318C610289117AE00795239 /* ViewController.swift in Sources */,
 				5318C60C289117AE00795239 /* AppDelegate.swift in Sources */,
 				5318C60E289117AE00795239 /* SceneDelegate.swift in Sources */,
